@@ -4,7 +4,7 @@ import * as AuthService from '../services/auth.service';
 
 export function login(req, res) {
   return Promise.resolve(Shuttle.liftRequest(req))
-    .then(Shuttle.liftFunction(AuthService.login, 'data'))
+    .then(Shuttle.liftFunction(AuthService.login, 'data.username'))
     .then(SendSuccess(res))
     .catch(SendError(res));
 }
