@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -Rf lib && babel src -d lib --copy-files",
+    "build": "rm -Rf server/lib && babel server/src -d server/lib --copy-files",
     "dev": "npm run build && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"

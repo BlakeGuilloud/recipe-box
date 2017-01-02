@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const authRoutes = require('./lib/routes/auth.routes');
+const authRoutes = require('./server/lib/routes/auth.routes');
 
 const db = process.env.MONGODB_URI || 'mongodb://localhost/testing';
 const port = process.env.PORT || 8100;
