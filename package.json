@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -Rf server/lib && babel server/src -d server/lib --copy-files",
-    "dev": "npm run build && webpack && node index.js",
+    "build": "rm -Rf server/lib && babel server/src -d server/lib --copy-files && webpack",
+    "dev": "npm run build && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
@@ -32,7 +32,6 @@
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
     "redux-actions": "^1.2.0",
-    "redux-devtools-extension": "^1.0.0",
     "redux-thunk": "^2.1.0",
     "tael": "^1.0.2",
     "webpack": "^1.14.0"
