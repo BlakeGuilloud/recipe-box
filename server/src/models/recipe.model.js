@@ -3,7 +3,8 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const RecipeSchema = new Schema({
-  url: String,
+  title: String,
+  userId: String,
 });
 
 module.exports = mongoose.model('Recipe', RecipeSchema);
