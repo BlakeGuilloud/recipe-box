@@ -1,34 +1,45 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
+import * as RecipeActions from '../actions/RecipeActions';
+import { Home } from '../components';
 
 class HomeContainer extends React.Component {
   static displayName = 'Home Container';
 
-  static propTypes = {};
+  static propTypes = {
+    fetchRecipes: React.PropTypes.func,
+    recipes: React.PropTypes.array,
+  };
 
   state = {};
 
+  componentDidMount() {
+    this.props.fetchRecipes();
+  }
+
   render() {
-    const props = {};
+    console.log('this props recipes', this.props.recipes);
+    const props = {
+      recipes: this.props.recipes,
+    };
 
     return (
-      <div>Hello from HomeContainer</div>
+      <Home {...props} />
     );
   }
 }
 
 function mapStateToProps(state) {
-  const { example } = state;
+  const { recipe } = state;
   return {
-    // example: example.examples,
+    recipes: recipe.recipes,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    // example: bindActionCreators(ExampleActions.exampleFunction, dispatch),
+    fetchRecipes: bindActionCreators(RecipeActions.fetchRecipes, dispatch),
   };
 }
 
