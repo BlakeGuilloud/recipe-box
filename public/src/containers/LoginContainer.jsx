@@ -2,12 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-class App extends React.Component {
-  static displayName = 'App';
 
-  static propTypes = {
-    children: React.PropTypes.node,
-  };
+class LoginContainer extends React.Component {
+  static displayName = 'LoginContainer';
+
+  static propTypes = {};
 
   state = {};
 
@@ -15,10 +14,7 @@ class App extends React.Component {
     const props = {};
 
     return (
-      <div>
-        Hello from App
-        {this.props.children}
-      </div>
+      <div>Hello from LoginContainer</div>
     );
   }
 }
@@ -36,4 +32,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);

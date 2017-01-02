@@ -1,9 +1,9 @@
-import { App } from './containers';
+import { App, LoginContainer } from './containers';
 
 const routes = {
   path: '/',
   component: App,
-  indexRoute: { component: App },
+  indexRoute: { component: LoginContainer },
   // childRoutes: [
   //   { path: '/home', component: HomeContainer },
   // ],
