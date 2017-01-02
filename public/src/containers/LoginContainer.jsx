@@ -26,6 +26,14 @@ class LoginContainer extends React.Component {
       <div>
         <input type="text" />
         <button onClick={this.handleLogin}>Login</button>
+        <form>
+        <div className="form-group">
+          <label htmlFor="username">Username</label>
+          <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" />
+        </div>
+        <button type="submit" className="btn btn-default">Login</button>
+        <button type="submit" className="btn btn-default">Register</button>
+      </form>
       </div>
     );
   }

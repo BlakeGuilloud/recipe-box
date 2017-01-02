@@ -16,7 +16,11 @@ class App extends React.Component {
 
     return (
       <div>
-        Hello from App
+        <div className="jumbotron text-center">
+          <h1>
+            <span className="text-primary">Recipe Box</span>
+          </h1>
+        </div>
         {this.props.children}
       </div>
     );

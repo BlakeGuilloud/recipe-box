@@ -35166,7 +35166,6 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'Hello from App',
 	        this.props.children
 	      );
 	    }
@@ -38003,7 +38002,7 @@
 /* 560 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -38020,11 +38019,53 @@
 
 
 	  return _react2.default.createElement(
-	    'div',
-	    null,
+	    "div",
+	    { className: "container" },
+	    _react2.default.createElement(
+	      "div",
+	      { className: "jumbotron text-center" },
+	      _react2.default.createElement(
+	        "h1",
+	        null,
+	        _react2.default.createElement(
+	          "span",
+	          { className: "text-primary" },
+	          "Recipe Box"
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "col-sm-12" },
+	      _react2.default.createElement(
+	        "form",
+	        { action: "", className: "form-inline row" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "form-group col-sm-12" },
+	          _react2.default.createElement(
+	            "label",
+	            { htmlFor: "title" },
+	            "Title"
+	          ),
+	          _react2.default.createElement("input", { style: { width: '100%' }, type: "text", className: "form-control input-lg text-center" }),
+	          _react2.default.createElement(
+	            "label",
+	            { htmlFor: "title" },
+	            "Url"
+	          ),
+	          _react2.default.createElement("input", { style: { width: '100%' }, type: "text", className: "form-control input-lg text-center" }),
+	          _react2.default.createElement(
+	            "button",
+	            { className: "btn btn-success btn-block" },
+	            "New Recipe"
+	          )
+	        )
+	      )
+	    ),
 	    recipes.map(function (item, idx) {
 	      return _react2.default.createElement(
-	        'div',
+	        "div",
 	        { key: idx },
 	        item.title
 	      );
@@ -38118,6 +38159,30 @@
 	          'button',
 	          { onClick: this.handleLogin },
 	          'Login'
+	        ),
+	        _react2.default.createElement(
+	          'form',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group' },
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'username' },
+	              'Username'
+	            ),
+	            _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'exampleInputEmail1', placeholder: 'Email' })
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { type: 'submit', className: 'btn btn-default' },
+	            'Login'
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { type: 'submit', className: 'btn btn-default' },
+	            'Register'
+	          )
 	        )
 	      );
 	    }
