@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import authReducer from './AuthReducer';
+import recipeReducer from './RecipeReducer';
 
-console.log('authReducer, authReducer', authReducer);
 const rootReducer = combineReducers({
   auth: authReducer,
+  recipe: recipeReducer,
   routing: routerReducer,
 });
 

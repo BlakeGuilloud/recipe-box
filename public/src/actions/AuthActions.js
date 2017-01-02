@@ -10,6 +10,7 @@ export function login(payload) {
     axios.post('/login', payload)
       .then((response) => {
         console.log('response', response);
+        localStorage.setItem('currentUser', response.data._id)
         dispatch(setUser(response.data));
       })
       .catch((err) => {
