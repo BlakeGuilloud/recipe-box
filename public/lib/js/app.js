@@ -35166,6 +35166,19 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'jumbotron text-center' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'text-primary' },
+	              'Recipe Box'
+	            )
+	          )
+	        ),
 	        this.props.children
 	      );
 	    }
@@ -38021,19 +38034,6 @@
 	  return _react2.default.createElement(
 	    "div",
 	    { className: "container" },
-	    _react2.default.createElement(
-	      "div",
-	      { className: "jumbotron text-center" },
-	      _react2.default.createElement(
-	        "h1",
-	        null,
-	        _react2.default.createElement(
-	          "span",
-	          { className: "text-primary" },
-	          "Recipe Box"
-	        )
-	      )
-	    ),
 	    _react2.default.createElement(
 	      "div",
 	      { className: "col-sm-12" },
